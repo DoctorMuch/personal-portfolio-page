@@ -1,8 +1,8 @@
 /* Setting up CSS color variables for the project */
 :root {
   --main-color:  rgba(243,234,64, 0.75);
-  --sub-color: #ffffff; 
-  --accent-color: #18b325;
+  --text-color: #ffffff; 
+  --accent-color: rgba(53,174,63, 0.8);
 }
 /* Overall page styling */
 * {
@@ -13,7 +13,7 @@
 
 body {
   background-image: url("../images/leaf-background.jpg");
-  color: var(--sub-color);;
+  color: var(--text-color);;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -37,30 +37,40 @@ header h1 {
   flex-wrap: wrap;
 }
 
+header a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 header nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-end;
-  text-decoration: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
 }
 
 header nav ul li {
   font-size: 2em;
   padding: .5em;
-
+  justify-content: end;
 }
 
 section {
   padding: 25px 25px;
-  display: block;
   flex-wrap: wrap;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   text-align: center;
+  width: 100%;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
 }
 
 img {
@@ -77,11 +87,6 @@ img {
   padding: 1rem;
 }
 
-.bio h2, h3 {
-  width: 100%;
-  text-align: center;
-  padding: 25px 10px;
-}
 
 .bio p {
   padding: 0 30px 25px 30px;
@@ -92,7 +97,8 @@ img {
 
 .flex-row {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
 }
@@ -109,7 +115,9 @@ img {
   border-radius: 5px;
 }
 
-.work-sample h2 {
-  width: 100%;
+.project {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
 }
 
