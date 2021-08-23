@@ -17,48 +17,9 @@ body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* styling for the header */
-header {
-  position: top;
-  top: 0;
-  padding: 1.5rem 3.5rem;
-  background-color: var(--main-color);
-  border-radius: 5px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  height: 70%;
-}
-
-header h1 {
-  font-size: 4.8rem;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
 a {
   text-decoration: none;
   color: var(--text-color);
-
-}
-header nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: flex-end;  
-}
-
-header nav ul li {
-  font-size: 2em;
-  padding: .5em;
-  justify-content: space-around;
-  flex: none;
-}
-
-section {
-  padding: 25px 25px;
-  flex-wrap: wrap;
 }
 
 h2 {
@@ -78,9 +39,49 @@ h4 {
   text-align: center;
 }
 
-.bio {
+/* styling for the header */
+header {
+  position: top;
+  top: 0;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 70%;
+}
+
+header h1 {
+  font-size: 4.8rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;  
+}
+
+header nav ul li {
+  font-size: 2em;
+  padding: .5em;
+  justify-content: space-around;
+  flex: none;
+}
+
+/*Styling to apply overall to the two content sections */
+
+section {
+  padding: 25px 25px;
+}
+
+/* Styling specific to the bio section */
+
+.bio {
   border: 6px solid #c79226cc;
   border-radius: 3px;
   background-color: var(--accent-color);
@@ -100,6 +101,8 @@ h4 {
   margin: 0 3rem;
 }
 
+/* Styling for the contact box inside of bio */
+
 .contact-info {
   width: 60%;
   height: auto;
@@ -112,6 +115,8 @@ h4 {
   margin-bottom: 5rem;
 }
 
+/* Styling to apply to flex boxes in various parts of the page */
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -120,6 +125,8 @@ h4 {
   justify-content: space-between;
   align-items: flex-end;
 }
+
+/* Styling for the recent work portfolio */
 
 .work-sample {
   background-color: var(--main-color);
@@ -142,6 +149,10 @@ h4 {
   font-weight: bold;
 }
 
+.work-sample img hover {
+  flex-grow: initial;
+}
+
 @media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
@@ -153,5 +164,53 @@ h4 {
     width: 100%;
     text-align: center;
   }
+
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    width: 80%;
+  }
+
+  .work-sample {
+    flex: 0 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
   
+  h2 {
+    flex: 1 100%;
+    text-align: center;
+  }
+  
+  h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .work-sample img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  h2 {
+    width: 95%;
+  }
+  
+  .bio p {
+    width: 100%;
+  }
+
+  .work-sample {
+    flex: 0 100%;
+  }
 }
