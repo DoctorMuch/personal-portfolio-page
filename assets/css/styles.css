@@ -1,14 +1,15 @@
 /* Setting up CSS color variables for the project */
 :root {
   --main-color:  rgba(243,234,64, 0.75);
-  --text-color: #ffffff; 
+  --text-color: #0c3522; 
   --accent-color: rgba(53,174,63, 0.8);
 }
 /* Overall page styling */
 * {
-  margin: 1rem;
-  padding: 0;
+  margin: 0.5rem;
+  padding: 10px;
   box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -30,7 +31,6 @@ h2 {
 
 h3 {
   font-size: 2.5rem;
-  text-align: center;
   width: 100%;
 }
 
@@ -121,12 +121,16 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 /* Styling for the recent work portfolio */
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 .work-sample {
   background-color: var(--main-color);
@@ -140,17 +144,22 @@ section {
 }
 
 .project {
-  display: inherit;
+  margin: 0;
   font-size: 1rem;
 }
 
 .project p {
-  padding: 1rem 0;
   font-weight: bold;
 }
 
 .work-sample img hover {
   flex-grow: initial;
+}
+/* footer styling */
+footer {
+  background-color: var(--main-color);
+  border: 6px solid #c79226cc;
+  border-radius: 3px;
 }
 
 @media screen and (max-width: 980px) {
