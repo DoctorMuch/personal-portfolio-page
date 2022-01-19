@@ -105,6 +105,14 @@ section {
   margin: 0 3rem;
 }
 
+.bio-text {
+  display: inline;
+}
+
+.bio-pic {
+  display: inline;
+}
+
 /* Styling for the contact box inside of bio */
 
 .contact-info {
